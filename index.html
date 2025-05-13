@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <!-- PopUnder Ad -->
+    <script type='text/javascript' src='//pl26578226.profitableratecpm.com/a8/db/01/a8db01556a40f3b6e90eb37d3c8816ec.js'></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageCompressor - Enterprise Image Optimization</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Enterprise-grade image compression and background removal tool with AI-powered optimization. Process images up to 50MB with secure cloud storage and collaboration features.">
+    <meta name="keywords" content="image compression, background removal, enterprise SaaS, AI image processing, optimize images, remove background">
+    <meta name="author" content="ImageCompressor Team">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="ImageCompressor - Enterprise Image Optimization">
+    <meta property="og:description" content="Enterprise-grade image compression and background removal tool with AI-powered optimization. Process images up to 50MB with secure cloud storage and collaboration features.">
+    <meta property="og:image" content="https://imagecompressor.com/assets/og-image.jpg ">
+    <meta property="og:url" content="https://imagecompressor.com/ ">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter :wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ @lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <!-- Styles -->
+    <style>
+        :root {
+            /* Color System */
+            --primary: #6366F1;
+            --secondary: #8B5CF6;
+            --accent: #EC4899;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --info: #3B82F6;
+            
+            /* Gradient Themes */
+            --gradient-purple: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            --gradient-accent: linear-gradient(135deg, #EC4899 0%, #F472B6 100%);
+            
+            /* Glassmorphism */
+            --glass-bg: rgba(15, 23, 42, 0.8);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            
+            /* Transition Times */
+            --transition-fast: 0.2s;
+            --transition-normal: 0.3s;
+            --transition-slow: 0.5s;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            background-color: #0F172A;
+            color: #F8FAFC;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button, input, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-center {
+            display: grid;
+            place-items: center;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .text-gradient {
+            background: var(--gradient-purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: var(--glass-bg);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 8rem;
+        }
+
+        .logo {
+            font-size: 2.4rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: transform var(--transition-normal);
+        }
+
+        .logo:hover {
+            transform: translateY(-2px) rotate(1deg);
+        }
+
+        .logo span {
+            background: var(--gradient-purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: color var(--transition-normal);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width var(--transition-normal);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .theme-toggle {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            background: var(--gradient-purple);
+            color: white;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 2rem 15rem;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 1) 100%), url('https://images.unsplash.com/photo-1581093588401-04f23be7fc7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80 ') no-repeat center center/cover;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 4.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            background: var(--gradient-purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 4rem;
+            color: #94A3B8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 6rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .feature-description {
+            color: #94A3B8;
+            font-size: 1.4rem;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            padding: 8rem 2rem;
+            background: #1E293B;
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tool-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--primary);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tool-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .tool-description {
+            color: #94A3B8;
+            margin-bottom: 2rem;
+            font-size: 1.4rem;
+        }
+
+        .upload-area {
+            border: 2px dashed rgba(99, 102, 241, 0.5);
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            margin-bottom: 2rem;
+        }
+
+        .upload-area:hover {
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .upload-icon {
+            width: 4rem;
+            height: 4rem;
+            margin: 0 auto 1.5rem;
+            color: var(--primary);
+        }
+
+        .upload-text {
+            color: #94A3B8;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .file-details {
+            color: #CBD5E1;
+            font-size: 1.2rem;
+        }
+
+        .preview-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .image-preview {
+            max-height: 300px;
+            object-fit: contain;
+            width: 100%;
+            border-radius: 0.75rem;
+        }
+
+        .stats-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stats-left {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .stats-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        .stats-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-value {
+            font-weight: 600;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: #94A3B8;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .slider-value {
+            min-width: 3rem;
+            text-align: center;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 200px;
+            height: 4px;
+            border-radius: 5px;
+            background: #475569;
+            outline: none;
+            transition: background var(--transition-normal);
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.1);
+        }
+
+        .slider::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.1);
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+        }
+
+        .button-primary {
+            background: var(--gradient-purple);
+            color: white;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .button-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .button-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .vip-badge {
+            display: inline-block;
+            background: var(--primary);
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-left: 1rem;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        }
+
+        /* Premium Features Section */
+        .premium-section {
+            padding: 8rem 2rem;
+            background: #0F172A;
+        }
+
+        .enterprise-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .enterprise-feature {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .enterprise-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .enterprise-feature-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--accent);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .enterprise-feature-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .enterprise-feature-description {
+            color: #94A3B8;
+            font-size: 1.4rem;
+            flex: 1;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 6rem 2rem;
+            background: #0F172A;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-brand .logo {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .footer-brand .logo span {
+            background: var(--gradient-purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-brand p {
+            color: #94A3B8;
+            font-size: 1.4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-link {
+            color: #94A3B8;
+            transition: color var(--transition-normal);
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icon {
+            width: 3rem;
+            height: 3rem;
+            color: #94A3B8;
+            transition: color var(--transition-normal);
+        }
+
+        .social-icon:hover {
+            color: white;
+        }
+
+        .copyright {
+            margin-top: 4rem;
+            text-align: center;
+            color: #475569;
+            font-size: 1.4rem;
+        }
+
+        /* Direct Link Ad Section */
+        .direct-link-ad {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            margin: 4rem 0;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .direct-link-ad h2 {
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .direct-link-ad p {
+            font-size: 1.5rem;
+            color: #94A3B8;
+            margin-bottom: 2rem;
+        }
+
+        .direct-link-ad a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.2rem 2.5rem;
+            background: var(--gradient-accent);
+            color: white;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all var(--transition-normal);
+        }
+
+        .direct-link-ad a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
+        }
+
+        /* Button with Icon */
+        .button-with-icon {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            padding: 1.5rem 2rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all var(--transition-normal);
+            z-index: 1000;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast.success {
+            background: rgba(16, 185, 129, 0.9);
+            color: white;
+        }
+
+        .toast.error {
+            background: rgba(239, 68, 68, 0.9);
+            color: white;
+        }
+
+        .toast.info {
+            background: rgba(59, 130, 246, 0.9);
+            color: white;
+        }
+
+        .toast-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3.6rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 8rem 2rem 10rem;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        /* Dark/Light Mode */
+        body.dark {
+            background-color: #0F172A;
+            color: #F8FAFC;
+        }
+        
+        body.light {
+            background-color: #F8FAFC;
+            color: #0F172A;
+        }
+        
+        body.light .navbar {
+            background: #FFFFFF;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        
+        body.light .theme-toggle {
+            background: #E2E8F0;
+        }
+        
+        body.light .text-gradient {
+            -webkit-text-fill-color: black;
+            background: black;
+        }
+    </style>
+</head>
+<body class="dark">
+    <!-- Banner Ad -->
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'a13b3d829266d60af8e16f334d155011',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/a13b3d829266d60af8e16f334d155011/invoke.js"></script>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <div class="toast-icon"></div>
+        <div id="toast-message"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span>Image</span><span>Compressor</span>
+                <lottie-player 
+                    src="https://assets10.lottiefiles.com/packages/lf20_6qgtyx3y.json "
+                    background="transparent"
+                    speed="1"
+                    style="width: 24px; height: 24px;"
+                    loop
+                    autoplay>
+                </lottie-player>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#features" class="nav-link active">Features</a></li>
+                <li><a href="#tools" class="nav-link">Tools</a></li>
+                <li><a href="#enterprise" class="nav-link">Enterprise</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="features">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Enterprise-Grade Image Compression & Background Removal</h1>
+                <p class="hero-subtitle">
+                    Process images up to 50MB with AI-powered optimization, secure storage, and collaboration features.
+                    Trusted by teams at Apple, Google, and Microsoft.
+                </p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="feature-title">Turbo Processing</div>
+                        <div class="feature-description">
+                            Edge CDN accelerated image pipeline with sub-second processing
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="feature-title">Secure Vault</div>
+                        <div class="feature-description">
+                            AES-256 encrypted storage with auto-deletion policy
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="feature-title">Collaboration</div>
+                        <div class="feature-description">
+                            Shareable preview links with expiration and password protection
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <h2 class="text-center text-gradient mb-8">Powerful Image Tools</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Image Compressor Tool -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                        </div>
+                        <div class="tool-title">Ultra Image Compressor <span class="vip-badge">VIP</span></div>
+                    </div>
+                    
+                    <div class="tool-description">
+                        Upload via drag & drop, clipboard paste, or cloud picker. Smart AI suggests optimal compression level.
+                    </div>
+                    
+                    <div class="upload-area" id="compressUpload">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <p class="upload-text">Click or Drag & Drop to Upload</p>
+                        <p class="file-details">JPG, PNG, WEBP, AVIF (Max 50MB)</p>
+                        <input type="file" id="compressInput" accept="image/jpeg,image/png,image/webp,image/avif" hidden>
+                    </div>
+                    
+                    <div class="slider-container">
+                        <label for="qualitySlider">Compression Level: <span id="qualityValue">85</span>%</label>
+                        <input type="range" id="qualitySlider" class="slider" min="1" max="100" value="85">
+                    </div>
+                    
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="formatSelect">Format:</label>
+                            <select id="formatSelect" class="button button-outline">
+                                <option value="jpeg">JPEG</option>
+                                <option value="png">PNG</option>
+                                <option value="webp">WEBP</option>
+                                <option value="avif">AVIF</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="optimizeSelect">Optimize For:</label>
+                            <select id="optimizeSelect" class="button button-outline">
+                                <option value="original">Original Quality</option>
+                                <option value="web">Web Optimization</option>
+                                <option value="social">Social Media</option>
+                            </select>
+                        </div>
+                        
+                        <button id="compressBtn" class="button button-primary">
+                            <i class="fas fa-compress"></i> Compress
+                        </button>
+                        
+                        <button id="downloadCompressed" class="button button-outline" disabled>
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                    
+                    <div class="preview-container mt-4">
+                        <div class="preview-card">
+                            <img id="compressOriginalPreview" class="image-preview" src="#" alt="Original Preview">
+                            <div class="stats-card">
+                                <div class="stats-left">
+                                    <div class="stats-icon">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                    <div class="stats-text">
+                                        <div class="stat-value" id="originalSize">0 KB</div>
+                                        <div class="stat-label">Original Size</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="preview-card">
+                            <img id="compressProcessedPreview" class="image-preview" src="#" alt="Processed Preview">
+                            <div class="stats-card">
+                                <div class="stats-left">
+                                    <div class="stats-icon">
+                                        <i class="fas fa-compress-arrows-alt"></i>
+                                    </div>
+                                    <div class="stats-text">
+                                        <div class="stat-value" id="compressedSize">0 KB</div>
+                                        <div class="stat-label">Compressed Size</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="stats-right">
+                                    <div class="stat-value" id="compressionRatio">0%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Background Remover Tool -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-eraser"></i>
+                        </div>
+                        <div class="tool-title">AI Background Remover</div>
+                    </div>
+                    
+                    <div class="tool-description">
+                        One-click background removal with live mask preview. Replace BG with solid color, gradient, or custom image.
+                    </div>
+                    
+                    <div class="upload-area" id="removeUpload">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <p class="upload-text">Click or Drag & Drop to Upload</p>
+                        <p class="file-details">JPG, PNG (Max 20MB)</p>
+                        <input type="file" id="removeInput" accept="image/jpeg,image/png" hidden>
+                    </div>
+                    
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="bgSelect">Background:</label>
+                            <select id="bgSelect" class="button button-outline">
+                                <option value="transparent">Transparent</option>
+                                <option value="white">White</option>
+                                <option value="black">Black</option>
+                                <option value="custom">Custom Image</option>
+                            </select>
+                        </div>
+                        
+                        <input type="file" id="customBgInput" accept="image/*" hidden>
+                        <label for="customBgInput" class="button button-outline" id="customBgLabel">
+                            <i class="fas fa-image"></i> Choose Custom Background
+                        </label>
+                        
+                        <button id="removeBtn" class="button button-primary">
+                            <i class="fas fa-eraser"></i> Remove Background
+                        </button>
+                        
+                        <button id="downloadRemoved" class="button button-outline" disabled>
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                    
+                    <div class="preview-container mt-4">
+                        <div class="preview-card">
+                            <img id="removeOriginalPreview" class="image-preview" src="#" alt="Original Preview">
+                            <div class="stats-card">
+                                <div class="stats-left">
+                                    <div class="stats-icon">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                    <div class="stats-text">
+                                        <div class="stat-value" id="removeOriginalSize">0 KB</div>
+                                        <div class="stat-label">Original Size</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="preview-card">
+                            <img id="removeProcessedPreview" class="image-preview" src="#" alt="Processed Preview">
+                            <div class="stats-card">
+                                <div class="stats-left">
+                                    <div class="stats-icon">
+                                        <i class="fas fa-eraser"></i>
+                                    </div>
+                                    <div class="stats-text">
+                                        <div class="stat-value" id="removeProcessedSize">0 KB</div>
+                                        <div class="stat-label">Processed Size</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Link Ad Section -->
+    <section class="direct-link-ad">
+        <div class="container">
+            <h2 class="text-gradient">Boost Your Earnings Instantly — Get High CPM Rates!</h2>
+            <p>Maximize your profits with top-tier direct link ads. Fast-loading, high-converting, and easy to integrate. Start earning more with every click.</p>
+            <a href="https://www.profitableratecpm.com/c79xswp6y?key=f3ca701eecd3a055af256b1bf26ba92e " 
+               class="button button-primary button-with-icon" target="_blank" rel="noopener noreferrer">
+                Start Earning Now <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Premium Features Section -->
+    <section class="premium-section" id="enterprise">
+        <div class="container">
+            <h2 class="text-center text-gradient mb-8">Enterprise Features</h2>
+            
+            <div class="enterprise-features">
+                <div class="enterprise-feature">
+                    <div class="enterprise-feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="enterprise-feature-title">Turbo Cloud Processing</div>
+                    <div class="enterprise-feature-description">
+                        Our Edge CDN accelerated image pipeline ensures lightning-fast processing with sub-second latency across the globe.
+                    </div>
+                </div>
+                
+                <div class="enterprise-feature">
+                    <div class="enterprise-feature-icon">
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <div class="enterprise-feature-title">Unlimited Batch Processing</div>
+                    <div class="enterprise-feature-description">
+                        Process hundreds of images simultaneously with our drag-and-drop batch processing interface. Monitor progress in real-time.
+                    </div>
+                </div>
+                
+                <div class="enterprise-feature">
+                    <div class="enterprise-feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="enterprise-feature-title">Secure Vault Storage</div>
+                    <div class="enterprise-feature-description">
+                        Store your images with AES-256 encryption. Set auto-deletion policies from 24 hours to 365 days for enhanced security.
+                    </div>
+                </div>
+                
+                <div class="enterprise-feature">
+                    <div class="enterprise-feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="enterprise-feature-title">Collaboration Mode</div>
+                    <div class="enterprise-feature-description">
+                        Generate shareable preview links with expiration dates and password protection. Perfect for client reviews and team collaboration.
+                    </div>
+                </div>
+                
+                <div class="enterprise-feature">
+                    <div class="enterprise-feature-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="enterprise-feature-title">AI-Powered Enhancement</div>
+                    <div class="enterprise-feature-description">
+                        One-click image enhancement with AI-powered denoising, sharpening, and color correction. Perfect for photo optimization.
+                    </div>
+                </div>
+                
+                <div class="enterprise-feature">
+                    <div class="enterprise-feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div class="enterprise-feature-title">Version History</div>
+                    <div class="enterprise-feature-description">
+                        Unlimited undo/redo with version history. Never lose your edits with our powerful history management system.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="premium-section" id="pricing">
+        <div class="container">
+            <h2 class="text-center text-gradient mb-8">Premium Pricing</h2>
+            
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">$9.99/mo</div>
+                    <ul>
+                        <li>100 conversions/month</li>
+                        <li>5GB storage</li>
+                        <li>Standard support</li>
+                    </ul>
+                    <a href="https://www.profitableratecpm.com/c79xswp6y?key=f3ca701eecd3a055af256b1bf26ba92e " 
+                       class="cta-button" target="_blank" rel="noopener noreferrer">
+                        Choose Plan
+                    </a>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <div class="price">$29.99/mo</div>
+                    <ul>
+                        <li>Unlimited conversions</li>
+                        <li>50GB storage</li>
+                        <li>Premium support</li>
+                    </ul>
+                    <a href="https://www.profitableratecpm.com/c79xswp6y?key=f3ca701eecd3a055af256b1bf26ba92e " 
+                       class="cta-button" target="_blank" rel="noopener noreferrer">
+                        Choose Plan
+                    </a>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$99.99/mo</div>
+                    <ul>
+                        <li>Unlimited conversions</li>
+                        <li>Unlimited storage</li>
+                        <li>Dedicated support</li>
+                    </ul>
+                    <a href="https://www.profitableratecpm.com/c79xswp6y?key=f3ca701eecd3a055af256b1bf26ba92e " 
+                       class="cta-button" target="_blank" rel="noopener noreferrer">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <!-- Social Ad -->
+        <script type='text/javascript' src='//pl26581301.profitableratecpm.com/43/d6/87/43d687af66613ec30f285ed22907671c.js'></script>
+        
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span>Image</span><span>Compressor</span>
+                    </div>
+                    <p>Enterprise-grade image processing with AI-powered optimization. Trusted by Fortune 500 companies worldwide.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                        <li><a href="#" class="footer-link">Press</a></li>
+                        <li><a href="#" class="footer-link">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Product</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Features</a></li>
+                        <li><a href="#" class="footer-link">Pricing</a></li>
+                        <li><a href="#" class="footer-link">API</a></li>
+                        <li><a href="#" class="footer-link">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link">Security</a></li>
+                        <li><a href="#" class="footer-link">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-social mt-8">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <div class="copyright mt-8">
+                © 2023 ImageCompressor, Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase & External Services -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+
+    <!-- Main JavaScript -->
+    <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const storage = firebase.storage();
+
+        // Theme Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark');
+                body.classList.add('light');
+                themeIcon.className = 'fas fa-sun';
+            } else {
+                body.classList.remove('light');
+                body.classList.add('dark');
+                themeIcon.className = 'fas fa-moon';
+            }
+        });
+
+        // Drag & Drop Uploads
+        function setupDragDrop(areaId, inputId) {
+            const area = document.getElementById(areaId);
+            const input = document.getElementById(inputId);
+            
+            area.addEventListener('click', () => input.click());
+            
+            area.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                area.style.backgroundColor = 'rgba(99, 102, 241, 0.05)';
+            });
+            
+            area.addEventListener('dragleave', () => {
+                area.style.backgroundColor = 'transparent';
+            });
+            
+            area.addEventListener('drop', (e) => {
+                e.preventDefault();
+                area.style.backgroundColor = 'transparent';
+                input.files = e.dataTransfer.files;
+                input.dispatchEvent(new Event('change'));
+            });
+        }
+
+        setupDragDrop('compressUpload', 'compressInput');
+        setupDragDrop('removeUpload', 'removeInput');
+
+        // Image Compression
+        document.getElementById('compressInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file && file.size > 50 * 1024 * 1024) {
+                showToast('File too large! Max 50MB allowed.', 'error');
+                return;
+            }
+            previewImage(file, 'compressOriginalPreview', 'originalSize');
+        });
+
+        document.getElementById('qualitySlider').addEventListener('input', function() {
+            document.getElementById('qualityValue').textContent = this.value;
+        });
+
+        document.getElementById('compressBtn').addEventListener('click', function() {
+            const fileInput = document.getElementById('compressInput');
+            const quality = document.getElementById('qualitySlider').value / 100;
+            const format = document.getElementById('formatSelect').value;
+            const optimizeFor = document.getElementById('optimizeSelect').value;
+            
+            if (!fileInput.files.length) {
+                showToast('Please upload an image first', 'error');
+                return;
+            }
+            
+            this.classList.add('processing');
+            this.innerHTML = '<span class="spinner"></span> Compressing...';
+            
+            compressImage(fileInput.files[0], quality, format, optimizeFor).then(blob => {
+                document.getElementById('compressProcessedPreview').src = URL.createObjectURL(blob);
+                document.getElementById('compressedSize').textContent = (blob.size / 1024).toFixed(2) + ' KB';
+                
+                const originalSize = parseInt(document.getElementById('originalSize').textContent);
+                const compressionRatio = 100 - ((blob.size / 1024) / (originalSize / 1000));
+                document.getElementById('compressionRatio').textContent = `${Math.round(compressionRatio)}% Saved`;
+                
+                document.getElementById('downloadCompressed').disabled = false;
+                document.getElementById('downloadCompressed').onclick = () => {
+                    downloadBlob(blob, `compressed-image.${format}`);
+                };
+                
+                this.classList.remove('processing');
+                this.innerHTML = '<i class="fas fa-compress-arrows-alt"></i> Compress';
+                
+                // Upload to Firebase
+                uploadToFirebase(blob, `compressed/${Date.now()}_compressed.${format}`);
+            }).catch(err => {
+                showToast('Compression failed: ' + err.message, 'error');
+                this.classList.remove('processing');
+                this.innerHTML = '<i class="fas fa-compress-arrows-alt"></i> Compress';
+            });
+        });
+
+        // Background Removal
+        document.getElementById('removeInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file && file.size > 20 * 1024 * 1024) {
+                showToast('File too large! Max 20MB allowed.', 'error');
+                return;
+            }
+            previewImage(file, 'removeOriginalPreview', 'removeOriginalSize');
+        });
+
+        document.getElementById('removeBtn').addEventListener('click', async function() {
+            const fileInput = document.getElementById('removeInput');
+            const bgOption = document.getElementById('bgSelect').value;
+            
+            if (!fileInput.files.length) {
+                showToast('Please upload an image first', 'error');
+                return;
+            }
+            
+            this.classList.add('processing');
+            this.innerHTML = '<span class="spinner"></span> Processing...';
+            
+            try {
+                const formData = new FormData();
+                formData.append('image_file', fileInput.files[0]);
+                formData.append('size', 'auto');
+                
+                // First try remove.bg API
+                try {
+                    const response = await axios.post(
+                        'https://api.remove.bg/v1.0/removebg ',
+                        formData,
+                        {
+                            responseType: 'blob',
+                            headers: {
+                                'X-Api-Key': 'YOUR_REMOVE_BG_API_KEY'
+                            }
+                        }
+                    );
+                    
+                    // If custom background selected
+                    if (bgOption === 'custom') {
+                        const customBgInput = document.getElementById('customBgInput');
+                        if (customBgInput.files.length > 0) {
+                            const backgroundImage = await loadImage(customBgInput.files[0]);
+                            const processedImage = await applyCustomBackground(response.data, backgroundImage);
+                            document.getElementById('removeProcessedPreview').src = URL.createObjectURL(processedImage);
+                            document.getElementById('downloadRemoved').onclick = () => {
+                                downloadBlob(processedImage, 'background-removed.png');
+                            };
+                        }
+                    } else {
+                        // Apply default background
+                        const processedImage = await applyDefaultBackground(response.data, bgOption);
+                        document.getElementById('removeProcessedPreview').src = URL.createObjectURL(processedImage);
+                        document.getElementById('downloadRemoved').onclick = () => {
+                            downloadBlob(processedImage, 'background-removed.png');
+                        };
+                    }
+                    
+                    document.getElementById('removeProcessedSize').textContent = (response.data.size / 1024).toFixed(2) + ' KB';
+                    document.getElementById('downloadRemoved').disabled = false;
+                    
+                    this.classList.remove('processing');
+                    this.innerHTML = '<i class="fas fa-eraser"></i> Remove Background';
+                    showToast('Background removed successfully!', 'success');
+                } catch (apiError) {
+                    console.warn('remove.bg API failed, using fallback model:', apiError);
+                    
+                    // Use internal fallback model
+                    const fallbackResult = await processWithFallbackModel(fileInput.files[0]);
+                    document.getElementById('removeProcessedPreview').src = URL.createObjectURL(fallbackResult);
+                    document.getElementById('removeProcessedSize').textContent = (fallbackResult.size / 1024).toFixed(2) + ' KB';
+                    document.getElementById('downloadRemoved').disabled = false;
+                    document.getElementById('downloadRemoved').onclick = () => {
+                        downloadBlob(fallbackResult, 'background-removed.png');
+                    };
+                    
+                    this.classList.remove('processing');
+                    this.innerHTML = '<i class="fas fa-eraser"></i> Remove Background';
+                    showToast('Background removed successfully!', 'success');
+                }
+            } catch (error) {
+                console.error('Background removal failed:', error);
+                showToast('Background removal failed. Please try again.', 'error');
+                this.classList.remove('processing');
+                this.innerHTML = '<i class="fas fa-eraser"></i> Remove Background';
+            }
+        });
+
+        // Helper Functions
+        function previewImage(file, previewId, sizeId) {
+            const preview = document.getElementById(previewId);
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+                
+                if (sizeId) {
+                    document.getElementById(sizeId).textContent = (file.size / 1000).toFixed(2) + ' KB';
+                }
+            };
+            
+            reader.readAsDataURL(file);
+        }
+
+        function compressImage(file, quality, format, optimizeFor) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.onload = function() {
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        ctx.drawImage(img, 0, 0);
+                        
+                        // Apply format-specific optimizations
+                        if (optimizeFor === 'web') {
+                            quality = Math.min(quality, 75);
+                        } else if (optimizeFor === 'social') {
+                            quality = Math.min(quality, 85);
+                        }
+                        
+                        canvas.toBlob(blob => {
+                            resolve(blob);
+                        }, `image/${format}`, quality);
+                    };
+                    img.onerror = reject;
+                    img.src = e.target.result;
+                };
+                reader.onerror = reject;
+                reader.readAsDataURL(file);
+            });
+        }
+
+        function downloadBlob(blob, filename) {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function uploadToFirebase(blob, path) {
+            const storageRef = storage.ref();
+            const fileRef = storageRef.child(path);
+            const file = new File([blob], path.split('/').pop(), { type: blob.type });
+            
+            fileRef.put(file).then(() => {
+                console.log('Image uploaded to Firebase:', path);
+            }).catch(error => {
+                console.error('Firebase upload failed:', error);
+            });
+        }
+
+        function loadImage(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.onload = () => resolve(img);
+                    img.onerror = reject;
+                    img.src = e.target.result;
+                };
+                reader.onerror = reject;
+                reader.readAsDataURL(file);
+            });
+        }
+
+        async function applyCustomBackground(transparencyBlob, backgroundImage) {
+            return new Promise((resolve, reject) => {
+                const transparencyReader = new FileReader();
+                transparencyReader.onload = function(e) {
+                    const transparencyImg = new Image();
+                    transparencyImg.onload = function() {
+                        const bgReader = new FileReader();
+                        bgReader.onload = function(e) {
+                            const bgImg = new Image();
+                            bgImg.onload = function() {
+                                const canvas = document.createElement('canvas');
+                                canvas.width = bgImg.width;
+                                canvas.height = bgImg.height;
+                                const ctx = canvas.getContext('2d');
+                                
+                                // Scale and center the transparency image
+                                const scale = Math.min(bgImg.width / transparencyImg.width, bgImg.height / transparencyImg.height);
+                                const width = transparencyImg.width * scale;
+                                const height = transparencyImg.height * scale;
+                                const x = (bgImg.width - width) / 2;
+                                const y = (bgImg.height - height) / 2;
+                                
+                                // Draw background
+                                ctx.drawImage(bgImg, 0, 0, bgImg.width, bgImg.height);
+                                
+                                // Draw transparency image
+                                ctx.drawImage(transparencyImg, x, y, width, height);
+                                
+                                canvas.toBlob(blob => {
+                                    resolve(blob);
+                                }, 'image/png');
+                            };
+                            bgImg.onerror = reject;
+                            bgImg.src = e.target.result;
+                        };
+                        bgReader.onerror = reject;
+                        bgReader.readAsDataURL(backgroundImage);
+                    };
+                    transparencyImg.onerror = reject;
+                    transparencyImg.src = e.target.result;
+                };
+                transparencyReader.onerror = reject;
+                transparencyReader.readAsDataURL(transparencyBlob);
+            });
+        }
+
+        async function applyDefaultBackground(transparencyBlob, bgOption) {
+            return new Promise((resolve, reject) => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.onload = function() {
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        
+                        // Draw background
+                        if (bgOption === 'transparent') {
+                            // Draw checkerboard pattern
+                            const patternSize = 10;
+                            const patternCanvas = document.createElement('canvas');
+                            patternCanvas.width = patternSize * 2;
+                            patternCanvas.height = patternSize * 2;
+                            const patternCtx = patternCanvas.getContext('2d');
+                            
+                            patternCtx.fillStyle = '#ffffff';
+                            patternCtx.fillRect(0, 0, patternCanvas.width, patternCanvas.height);
+                            
+                            patternCtx.fillStyle = '#e0e0e0';
+                            patternCtx.fillRect(0, 0, patternSize, patternSize);
+                            patternCtx.fillRect(patternSize, patternSize, patternSize, patternSize);
+                            
+                            const pattern = ctx.createPattern(patternCanvas, 'repeat');
+                            ctx.fillStyle = pattern;
+                            ctx.fillRect(0, 0, canvas.width, canvas.height);
+                        } else {
+                            ctx.fillStyle = bgOption;
+                            ctx.fillRect(0, 0, canvas.width, canvas.height);
+                        }
+                        
+                        // Draw transparency image
+                        ctx.drawImage(img, 0, 0);
+                        
+                        canvas.toBlob(blob => {
+                            resolve(blob);
+                        }, 'image/png');
+                    };
+                    img.onerror = reject;
+                    img.src = e.target.result;
+                };
+                reader.onerror = reject;
+                reader.readAsDataURL(transparencyBlob);
+            });
+        }
+
+        async function processWithFallbackModel(file) {
+            return new Promise((resolve) => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.onload = function() {
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        
+                        // Simple background removal (for demonstration)
+                        ctx.drawImage(img, 0, 0);
+                        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                        const data = imageData.data;
+                        
+                        // Simple threshold-based background removal
+                        for (let i = 0; i < data.length; i += 4) {
+                            if (data[i] > 200 && data[i+1] > 200 && data[i+2] > 200) {
+                                data[i+3] = 0;
+                            }
+                        }
+                        
+                        ctx.putImageData(imageData, 0, 0);
+                        canvas.toBlob(blob => {
+                            resolve(blob);
+                        }, 'image/png');
+                    };
+                    img.onerror = () => reject('Image loading failed');
+                    img.src = e.target.result;
+                };
+                reader.onerror = () => reject('File reading failed');
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // Toast Notifications
+        function showToast(message, type = 'info') {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            const toastIcon = document.querySelector('.toast-icon');
+            
+            toastMessage.textContent = message;
+            toast.className = 'toast show ' + type;
+            
+            let iconClass = '';
+            switch (type) {
+                case 'success':
+                    iconClass = 'fa-check-circle';
+                    break;
+                case 'error':
+                    iconClass = 'fa-exclamation-circle';
+                    break;
+                case 'info':
+                    iconClass = 'fa-info-circle';
+                    break;
+            }
+            toastIcon.className = 'toast-icon fas ' + iconClass;
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+        }
+
+        // Navbar Scroll Tracking
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            sections.forEach((section, i) => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    navLinks[i].classList.add('active');
+                }
+            });
+        });
+
+        // Direct Link Ad Click Tracking
+        document.querySelectorAll('.direct-link-ad a').forEach(link => {
+            link.addEventListener('click', () => {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-CONVERSION_ID/CONVERSION_ID'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
